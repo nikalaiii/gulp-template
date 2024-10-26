@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,73 @@
     <link rel="stylesheet" href="./styles/main.scss">
     <script src="scripts/main.js" defer></script>
   </head>
-  <body>
-    <h1>Landing Page</h1>
+  <body class="page__body">
+    <header class="header">
+      <div class="header__top-bar">
+        <div class="header__menu"><a href="#aside" class="header__menu__link"></a></div>
+        <h1 class="hedaer__tittle">Pushok and his Friends</h1>
+        <div class="header__donate"></div>
+      </div>
+    </header>
+
+    <aside class="menu" id="aside">
+      <div class="menu__content">
+        <div class="menu__content__top-bar">
+          <div class="menu__close">
+            <a class="menu__close__link" href="#"></a>
+          </div>
+        </div>
+
+        <nav class="menu__content__navigation">
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#section1">Section1</a>
+            </li>
+
+            <li class="nav__item"> 
+              <a class="nav__link" href="#section2">Section2</a>
+            </li>
+
+            <li class="nav__item"> 
+              <a class="nav__link" href="#section3">Section3</a>
+            </li>
+
+            <li class="nav__item"> 
+              <a class="nav__link" href="#section4">Section4</a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="#section5">Section5</a>
+            </li>
+
+            <li class="nav__item"> 
+              <a class="nav__link" href="#section6">Section6</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <main class="main">
+      <section class="section1">
+        <h1 class="section__tittle">Section1</h1>
+      </section>
+      <section class="section2">
+        <h1 class="section__tittle">Section2</h1>
+      </section>
+      <section class="section3">
+        <h1 class="section__tittle">Section3</h1>
+      </section>
+      <section class="section4">
+        <h1 class="section__tittle">Section4</h1>
+      </section>
+      <section class="section5">
+        <h1 class="section__tittle">Section5</h1>
+      </section>
+      <section class="section6">
+        <h1 class="section__tittle">Section6</h1>
+      </section>
+      
+    </main>
   </body>
 </html>
