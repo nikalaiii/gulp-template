@@ -1,75 +1,89 @@
+
+
+@mixin on-tablet {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+
+
 @mixin hedaer-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: $button-header-size;
-    width: $button-header-size;
-    background-color: $button-header-color;
-    border: 5px solid white;
-    border-radius: 25%;
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $button-header-size;
+  width: $button-header-size;
+  background-color: $button-header-color;
+  border: 5px solid white;
+  border-radius: 25%;
+  transition: all 0.3s ease;
 
-    &:hover {
-      transform:  scale(1.2);
-      border-width: 10px;
-    }
+  @include on-tablet {
+    height: 100px;
+    width: 100px;
+  }
 
-    &:active {
-        transform: scale(1.1);
-    }
+  &:hover {
+    transform:  scale(1.2);
+    border-width: 10px;
+  }
+
+  &:active {
+      transform: scale(1.1);
+  }
 }
 
 @mixin close-button($size){
-  display: block;
-  background-image: url(..//images/icon-close.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: $size;
-  height: $size;
-  transition: all 0.3s ease;
+display: block;
+background-image: url(..//images/icon-close.png);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+width: $size;
+height: $size;
+transition: all 0.3s ease;
+
+&:hover {
+  transform: scale(1.3) rotate(360deg);
   
-  &:hover {
-    transform: scale(1.3) rotate(360deg);
-    
-  }
+}
 }
 
 @mixin set-section($padding, $topmarg,){
-  padding-inline: $padding;
-  margin-top: $topmarg;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+padding-inline: $padding;
+margin-top: $topmarg;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-  &__tittle {
-    font-size: 100px;
-    margin: 30px;
-    font-family: "Fjalla One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+&__tittle {
+  font-size: 100px;
+  margin: 30px;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 
-  }
+}
 
-  &__text {
-    font-size: 30px;
-    padding: 20px;
-    font-family: Merriweather, serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+&__text {
+  font-size: 30px;
+  padding: 20px;
+  font-family: Merriweather, serif;
+  font-weight: 400;
+  font-style: normal;
+}
 }
 
 @mixin image-secret {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 50vh;
-  height: 50vh;
-  border-radius: 50%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+width: 50vh;
+height: 50vh;
+border-radius: 50%;
 }
 
 @mixin content-padding-inline {
-  padding-inline: 100px;
+padding-inline: 100px;
 }
